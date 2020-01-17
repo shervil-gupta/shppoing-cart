@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { ResultComponent } from './result/result.component';
 import {ResultService} from './result.service';
 import { ItemComponent } from './item/item.component';
 
@@ -11,7 +10,6 @@ import { ItemComponent } from './item/item.component';
   declarations: [
     AppComponent,
     SearchBarComponent,
-    ResultComponent,
     ItemComponent
   ],
   imports: [
