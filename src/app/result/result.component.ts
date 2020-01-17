@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ResultService} from '../result.service';
 
 @Component({
   selector: 'app-result',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:prefer-const
+   public lists;
+   public length;
+// @ts-ignore
+  constructor(result: ResultService) {
+    this.lists = result.getResult();
+    // tslint:disable-next-line:no-unused-expression
+    this.length = (12 / this.lists.length).toString();
+    // console.log(this.length);
+  }
 
   ngOnInit() {
   }
-
 }
