@@ -3,11 +3,12 @@
   height: 120px;
   background-image: linear-gradient(to bottom right, crimson, blue);
   text-align: center;
+  box-shadow: 5px 8px 5px 1px;
 }
 
 p {
   padding-top: 5px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Andale Mono", fantasy;
   color: white;
 }
@@ -20,4 +21,5 @@ input {
   border-style: solid;
   border-color: black;
   border-radius: 20px;
+  border-width: 4px;
 }
