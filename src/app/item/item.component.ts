@@ -10,13 +10,12 @@ export class ItemComponent implements OnInit {
   public itemPrice: number;
   public itemQuantity: number;
   public itemImage: string;
-  constructor(x: string = 'no_name', y: number = 0, z: number = 0, u: string = 'default.png') {
-    this.itemName = x;
-    this.itemPrice = y;
-    this.itemQuantity = z;
-    this.itemImage = u;
+  constructor() {
+    this.itemName = 'NO NAME';
+    this.itemPrice = 0;
+    this.itemQuantity = 0;
+    this.itemImage = 'default.png';
   }
-
   ngOnInit() {
   }
 
