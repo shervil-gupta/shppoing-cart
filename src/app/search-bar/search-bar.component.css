@@ -1,5 +1,6 @@
 #searchDiv {
   height: 120px;
+  width: 700px;
   background-image: linear-gradient(to bottom right, crimson, blue);
   text-align: center;
   box-shadow: 5px 8px 5px 1px;

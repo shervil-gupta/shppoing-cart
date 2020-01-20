@@ -1,10 +1,10 @@
 <div id = 'd2'>
   <p class = 'title' align="center">{{itemName}}</p>
-  <hr color = "black">
+  <hr color = "rgb(0,0,0)">
   <img align="left" src = "../../assets/images/{{itemImage}}.png">
   <div>
     <br>
-    <p class = 'label'>Quantity : <input maxlength="2" type = "text" class = 'inputs' id = 't1' /></p>
-    <p class = 'label' id = 't2'>Price : {{itemPrice}}</p>
+    <p class = 'label'>Quantity : <input class='inputs' #t1 maxlength="2" type="text" [ngModel]="itemQuantity" (ngModelChange)="change($event)"></p>
+    <p class = 'label' id = 't2' ng>Price : {{totalPrice}}</p>
   </div>
 </div>

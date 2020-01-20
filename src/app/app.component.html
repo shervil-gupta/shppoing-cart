@@ -1,3 +1,5 @@
-<app-search-bar></app-search-bar>
+<div align="center">
+  <app-search-bar (keypress)="onClick($event.key)"></app-search-bar>
+</div>
 <br>
-<app-item></app-item>
+<app-item [holder]="holder1"></app-item>

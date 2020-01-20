@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -6,22 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+  @Input() public holder: string;
   public itemName: string;
   public itemPrice: number;
   public itemQuantity: number;
-  public itemImage: String;
+  public itemImage: string;
+  public totalPrice: number;
+  // tslint:disable-next-line:align
   constructor() {
-    this.itemName = 'NO NAME';
-    this.itemPrice = 0;
+    this.itemPrice = 100;
     this.itemQuantity = 0;
     this.itemImage = 'default';
+    this.totalPrice = 0;
   }
-  change() {
-   const x = document.getElementById('t1');
-   this.itemQuantity = parseInt(x.innerText.toString());
-   this.itemPrice = (this.itemQuantity * this.itemPrice);
-   const y = document.getElementById('t2');
-   alert(this.itemPrice);
+  change = (x) => {
+    if (x !== '') {
+      // tslint:disable-next-line:radix
+      this.itemQuantity = parseInt(x);
+    } else {
+      this.itemQuantity = 0;
+    }
+    this.totalPrice = this.itemQuantity * this.itemPrice;
   }
-  ngOnInit() { }
+  ngOnChange() {
+    this.itemName = this.holder;
+  }
+  ngOnInit(): void { }
+
 }
